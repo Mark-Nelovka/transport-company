@@ -1,25 +1,79 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Suspense, lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+import { Loader } from "./components/Loader";
+
+import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
+import { Container } from "./styles/container.styled";
+
+const AboutUsPage = lazy(
+  () => import("./pages/AboutUs" /* webpackChunkName: "AboutUsPage" */)
+);
+
+const ShippersPage = lazy(
+  () => import("./pages/Shippers" /* webpackChunkName: "ShippersPage" */)
+);
+
+const FlatbedPage = lazy(
+  () => import("./pages/Flatbed" /* webpackChunkName: "FlatbedPage" */)
+);
+
+const FinancePage = lazy(
+  () => import("./pages/Finance" /* webpackChunkName: "FinancePage" */)
+);
+
+const NewsPage = lazy(
+  () => import("./pages/News" /* webpackChunkName: "NewsPage" */)
+);
+
+const CareersPage = lazy(
+  () => import("./pages/Careers" /* webpackChunkName: "CareersPage" */)
+);
+
+const ContactsPage = lazy(
+  () => import("./pages/Contacts" /* webpackChunkName: "ContactsPage" */)
+);
+
+const PolicyPage = lazy(
+  () => import("./pages/Policy" /* webpackChunkName: "PolicyPage" */)
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <Suspense fallback={<Loader />}>
+        <main>
+          <Routes>
+            <Route path="/transport-company" element={<HomePage />} />
+            <Route path="/transport-company/about" element={<AboutUsPage />} />
+            <Route
+              path="/transport-company/shippers"
+              element={<ShippersPage />}
+            />
+            <Route
+              path="/transport-company/flatbed"
+              element={<FlatbedPage />}
+            />
+            <Route
+              path="/transport-company/lease&finance"
+              element={<FinancePage />}
+            />
+            <Route path="/transport-company/news" element={<NewsPage />} />
+            <Route
+              path="/transport-company/careers"
+              element={<CareersPage />}
+            />
+            <Route
+              path="/transport-company/contacts"
+              element={<ContactsPage />}
+            />
+            <Route path="/transport-company/policy" element={<PolicyPage />} />
+          </Routes>
+        </main>
+      </Suspense>
+      <footer></footer>
+    </Container>
   );
 }
 
