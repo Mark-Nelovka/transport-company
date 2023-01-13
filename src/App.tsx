@@ -40,40 +40,52 @@ const PolicyPage = lazy(
 
 function App() {
   return (
-    <Container>
+    <>
       <Header />
-      <Suspense fallback={<Loader />}>
-        <main>
-          <Routes>
-            <Route path="/transport-company" element={<HomePage />} />
-            <Route path="/transport-company/about" element={<AboutUsPage />} />
-            <Route
-              path="/transport-company/shippers"
-              element={<ShippersPage />}
-            />
-            <Route
-              path="/transport-company/flatbed"
-              element={<FlatbedPage />}
-            />
-            <Route
-              path="/transport-company/lease&finance"
-              element={<FinancePage />}
-            />
-            <Route path="/transport-company/news" element={<NewsPage />} />
-            <Route
-              path="/transport-company/careers"
-              element={<CareersPage />}
-            />
-            <Route
-              path="/transport-company/contacts"
-              element={<ContactsPage />}
-            />
-            <Route path="/transport-company/policy" element={<PolicyPage />} />
-          </Routes>
-        </main>
-      </Suspense>
+      <Container>
+        <Suspense fallback={<Loader />}>
+          <main>
+            <Routes>
+              <Route path="/transport-company" element={<HomePage />} />
+              <Route
+                path="/transport-company/about"
+                element={<AboutUsPage />}
+              />
+              <Route
+                path="/transport-company/shippers"
+                element={<ShippersPage />}
+              />
+              <Route
+                path="/transport-company/services"
+                element={<FlatbedPage />}
+              />
+              <Route
+                path="/transport-company/services/:serviceName"
+                element={<FlatbedPage />}
+              />
+              <Route
+                path="/transport-company/lease&finance"
+                element={<FinancePage />}
+              />
+              <Route path="/transport-company/news" element={<NewsPage />} />
+              <Route
+                path="/transport-company/careers"
+                element={<CareersPage />}
+              />
+              <Route
+                path="/transport-company/contacts"
+                element={<ContactsPage />}
+              />
+              <Route
+                path="/transport-company/policy"
+                element={<PolicyPage />}
+              />
+            </Routes>
+          </main>
+        </Suspense>
+      </Container>
       <footer></footer>
-    </Container>
+    </>
   );
 }
 
