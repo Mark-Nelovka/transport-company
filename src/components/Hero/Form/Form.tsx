@@ -1,69 +1,40 @@
-import { Formik, Form, useField } from "formik";
+import { Formik, Form } from "formik";
 import { useState } from "react";
-import * as yup from "yup";
+import MyTextInput from "../../../general/Input";
+import { schemaStepOne, schemaSecondStep } from "../../../helpers/validation";
 import man from "../../../images/svg/manForm.svg";
 import mail from "../../../images/svg/mailForm.svg";
 import phone from "../../../images/svg/phone.svg";
+import marker from "../../../images/svg/marker.svg";
+import driveExp from "../../../images/svg/drivingForm.svg";
 
-import {
-  FormSubscribe,
-  InputContainer,
-  InputLabel,
-  InputIconContainer,
-  BorderTop,
-  BorderLeft,
-  InputForm,
-  TitleForm,
-  Title,
-  TitleBorderBottom,
-  TitleBorderLeft,
-  TitleBorderTop,
-  TitleBorderRight,
-  ButtonForm,
-  FormPolicyContainer,
-  TurnButton,
-  RoundButton,
-  AcceptPolicyText,
-  AcceptPolicyLink,
-  ErrorMessage,
-} from "./Form.styled";
+import * as S from "./Form.styled";
+import { Loader } from "../../Loader";
 
-interface IText {
-  name: string;
-  type: string;
-  placeholder: string;
-  id: string;
-  src: string;
-  alt: string;
-  turn?: boolean;
+interface IStateForm {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  tel?: string;
+  country?: string;
+  experience?: string;
 }
-
-const MyTextInput = ({ name, type, placeholder, id, src, alt }: IText) => {
-  const [field, meta] = useField({ name, type, placeholder });
-  return (
-    <InputContainer>
-      <InputLabel htmlFor={id}>
-        <InputIconContainer>
-          <img src={src} alt={alt} />
-        </InputIconContainer>
-
-        <InputForm
-          {...field}
-          name={name}
-          id={id}
-          type={type}
-          placeholder={placeholder}
-        />
-      </InputLabel>
-      {meta.touched && meta.error ? (
-        <ErrorMessage>{meta.error}</ErrorMessage>
-      ) : null}
-    </InputContainer>
-  );
-};
 
 export const FormTest = () => {
   const [turn, setTurn] = useState<string>("false");
+  const [stateMachine, setStateMachine] = useState<string>("idle");
+  const [steps, setSteps] = useState<number>(1);
+  const [initialState, setInitialState] = useState<IStateForm>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    tel: "",
+    country: "",
+    experience: "",
+  });
+  const [validationSchema, setValidationSchema] = useState<
+    typeof schemaStepOne | typeof schemaSecondStep
+  >(schemaStepOne);
 
   const checkButton = () => {
     if (turn === "false") {
@@ -73,117 +44,130 @@ export const FormTest = () => {
     setTurn("false");
   };
 
-  const schema = yup.object().shape({
-    firstName: yup
-      .string()
-      .min(1)
-      .matches(/^[a-zA-z""]/, "available latin-based alphabet")
-      .max(30, "must be less than 30 characters")
-      .required(),
-    lastName: yup
-      .string()
-      .min(1)
-      .matches(/^[a-zA-z""]/, "available latin-based alphabet")
-      .max(30, "must be less than 30 characters")
-      .required(),
-    email: yup
-      .string()
-      .email()
-      .matches(
-        /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.""]+$/,
-        "available latin-based alphabet, numeric character and _ . + -"
-      )
-      .min(1, "must be at least 6 characters")
-      .max(63, "email length must be less than 63 characters")
-      .required(),
-    tel: yup
-      .string()
-      .matches(/^[0-9""]/, "available number")
-      .min(10)
-      .max(16, "must be less than 16 characters")
-      .required(),
-  });
+  const handleSubmit = () => {
+    if (steps === 1) {
+      setSteps(2);
+      setTurn("false");
+      setValidationSchema(schemaSecondStep);
+      return;
+    }
+    setStateMachine("loading");
+    const submitForm = setTimeout(() => {
+      setSteps(1);
+      setStateMachine("idle");
+      setTurn("false");
+      setValidationSchema(schemaStepOne);
+      clearTimeout(submitForm);
+    }, 1000);
+  };
 
   return (
     <>
       <Formik
-        initialValues={{
-          firstName: "",
-          lastName: "",
-          email: "",
-          tel: "",
-        }}
-        validationSchema={schema}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
+        initialValues={initialState}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
       >
         <Form>
-          <Title>
-            <TitleBorderTop />
-            <TitleBorderRight />
+          <S.Title>
+            <S.TitleBorderTop />
+            <S.TitleBorderRight />
             Welcome to D&D United Corp, to drive
-            <TitleBorderBottom />
-            <TitleBorderLeft />
-          </Title>
-          <FormSubscribe>
-            <BorderTop />
-            <BorderLeft />
-            <TitleForm>with us, please fill out the form below:</TitleForm>
-            <MyTextInput
-              name="firstName"
-              type="text"
-              id="name"
-              placeholder="First Name"
-              src={man}
-              alt="Man"
-            />
+            <S.TitleBorderBottom />
+            <S.TitleBorderLeft />
+          </S.Title>
 
-            <MyTextInput
-              name="lastName"
-              type="text"
-              id="lastName"
-              placeholder="Last Name"
-              src={man}
-              alt="Man"
-            />
+          <S.FormSubscribe>
+            <S.BorderTop />
+            <S.BorderLeft />
+            <S.TitleForm>with us, please fill out the form below:</S.TitleForm>
+            {steps === 1 && (
+              <>
+                <MyTextInput
+                  name="firstName"
+                  type="text"
+                  id="name"
+                  placeholder="First Name"
+                  src={man}
+                  alt="Your first name"
+                />
 
-            <MyTextInput
-              name="email"
-              type="email"
-              id="email"
-              placeholder="Email"
-              src={mail}
-              alt="Man"
-            />
+                <MyTextInput
+                  name="lastName"
+                  type="text"
+                  id="lastName"
+                  placeholder="Last Name"
+                  src={man}
+                  alt="Yout last name"
+                />
 
-            <MyTextInput
-              name="tel"
-              type="number"
-              id="Phone"
-              src={phone}
-              alt="Man"
-              placeholder="0123456789"
-            />
+                <MyTextInput
+                  name="email"
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                  src={mail}
+                  alt="Your email"
+                />
 
-            <ButtonForm disabled={turn === "false" ? true : false}>
+                <MyTextInput
+                  name="tel"
+                  type="number"
+                  id="Phone"
+                  src={phone}
+                  alt="Your phone number"
+                  placeholder="0123456789"
+                />
+              </>
+            )}
+            {steps === 2 && stateMachine !== "loading" && (
+              <>
+                <MyTextInput
+                  name="country"
+                  type="text"
+                  id="country"
+                  placeholder="State"
+                  src={marker}
+                  alt="write country"
+                />
+
+                <MyTextInput
+                  name="experience"
+                  type="number"
+                  id="experience"
+                  placeholder="Driving Experience (years)"
+                  src={driveExp}
+                  alt="write your experience (years)"
+                />
+              </>
+            )}
+            {steps === 2 && (
+              <>
+                <S.CheckboxTitle>We work only 1099:</S.CheckboxTitle>
+                <S.CheckboxContainer>
+                  <S.Checkbox id="checkbox" />
+                  <S.CheckboxLabel htmlFor="checkbox">
+                    Mark the checkbox if you agree.
+                  </S.CheckboxLabel>
+                </S.CheckboxContainer>
+              </>
+            )}
+            <S.ButtonForm disabled={turn === "false" ? true : false}>
               next step
-            </ButtonForm>
-            <FormPolicyContainer>
-              <TurnButton onClick={checkButton}>
-                <RoundButton turn={turn} />
-              </TurnButton>
-              <AcceptPolicyText>
+            </S.ButtonForm>
+            <S.FormPolicyContainer>
+              <S.TurnButton onClick={checkButton}>
+                <S.RoundButton turn={turn} />
+              </S.TurnButton>
+              <S.AcceptPolicyText>
                 I accept the terms and conditions of the
-                <AcceptPolicyLink to="/transport-company/policy">
+                <S.AcceptPolicyLink to="/transport-company/policy">
                   Privacy Policy
-                </AcceptPolicyLink>
-              </AcceptPolicyText>
-            </FormPolicyContainer>
-          </FormSubscribe>
+                </S.AcceptPolicyLink>
+              </S.AcceptPolicyText>
+            </S.FormPolicyContainer>
+            {stateMachine === "loading" && <Loader />}
+          </S.FormSubscribe>
         </Form>
       </Formik>
     </>

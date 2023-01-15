@@ -23,6 +23,8 @@ const itemsForSubServices = [
 
 const itemsForSubAbout = ["Blog"];
 
+const itemsForSubCareers = ["Driver Position", "Office Position"];
+
 export const Header = () => {
   const [sectionName, setSectionName] = useState<string>("");
   const [itemForSubMenu, setItemForSubMenu] = useState<string[]>([]);
@@ -35,6 +37,10 @@ export const Header = () => {
     switch (id) {
       case "about":
         setItemForSubMenu(itemsForSubAbout);
+        break;
+
+      case "careers":
+        setItemForSubMenu(itemsForSubCareers);
         break;
 
       default:
@@ -102,10 +108,18 @@ export const Header = () => {
                   News
                 </NavigationLink>
               </NavigationItem>
-              <NavigationItem>
+              <NavigationItem
+                id="careers"
+                onMouseMove={getItem}
+                onMouseLeave={() => setItemForSubMenu([])}
+              >
                 <NavigationLink to="/transport-company/careers">
                   Careers
                 </NavigationLink>
+                <SubMenu
+                  itemForSubMenu={itemForSubMenu}
+                  sectionName={sectionName}
+                />
               </NavigationItem>
               <NavigationItem>
                 <NavigationLink to="/transport-company/contacts">

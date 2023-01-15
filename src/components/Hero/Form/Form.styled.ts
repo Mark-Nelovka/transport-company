@@ -107,7 +107,7 @@ export const TitleBorderRight = styled.span`
     top: -3px;
     right: -4px;
     width: 14px;
-    height: 350px;
+    height: 380px;
     border-right: 4px solid #6D010C;
     border-top-left-radius: 5px;
     border-top-right-radius: 4px;
@@ -145,6 +145,36 @@ border: none;
 padding: 14px 20px 14px 35px;
 `
 
+export const CheckboxTitle = styled.p`
+font-family: ${({ theme }) => theme.fonts.basic};
+font-style: ${({ theme }) => theme.fontStyle.normal};
+font-weight: ${({ theme }) => theme.fontWeight.bold};
+font-size: 14px;
+line-height: 150%;
+color: ${({ theme }) => theme.palette.darkGrey};
+`
+
+export const CheckboxContainer = styled.div`
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+`
+
+export const Checkbox = styled.input.attrs({
+    type: "checkbox"
+})`
+`
+
+export const CheckboxLabel = styled.label`
+font-family: ${({ theme }) => theme.fonts.basic};
+font-style: ${({ theme }) => theme.fontStyle.normal};
+font-weight: ${({ theme }) => theme.fontWeight.reqular};
+font-size: 14px;
+line-height: 150%;
+color: ${({ theme }) => theme.palette.darkGrey};
+opacity: 0.8;
+margin-left: 7px;
+`
 
 export const ButtonForm = styled(Button)`
 background-color: ${({ theme }) => theme.palette.active};
