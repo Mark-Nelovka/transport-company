@@ -60,6 +60,7 @@ code {
   button {
     padding: 0;
     cursor: pointer;
+    border: none;
   }
 
 input[type="number"] {

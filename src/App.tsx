@@ -4,7 +4,7 @@ import { Loader } from "./components/Loader";
 
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
-import { Container } from "./styles/container.styled";
+// import { Container } from "./styles/container.styled";
 
 const AboutUsPage = lazy(
   () => import("./pages/AboutUs" /* webpackChunkName: "AboutUsPage" */)
@@ -42,48 +42,42 @@ function App() {
   return (
     <>
       <Header />
-      <Container>
-        <Suspense fallback={<Loader />}>
-          <main>
-            <Routes>
-              <Route path="/transport-company" element={<HomePage />} />
-              <Route
-                path="/transport-company/about"
-                element={<AboutUsPage />}
-              />
-              <Route
-                path="/transport-company/shippers"
-                element={<ShippersPage />}
-              />
-              <Route
-                path="/transport-company/services"
-                element={<FlatbedPage />}
-              />
-              <Route
-                path="/transport-company/services/:serviceName"
-                element={<FlatbedPage />}
-              />
-              <Route
-                path="/transport-company/lease&finance"
-                element={<FinancePage />}
-              />
-              <Route path="/transport-company/news" element={<NewsPage />} />
-              <Route
-                path="/transport-company/careers"
-                element={<CareersPage />}
-              />
-              <Route
-                path="/transport-company/contacts"
-                element={<ContactsPage />}
-              />
-              <Route
-                path="/transport-company/policy"
-                element={<PolicyPage />}
-              />
-            </Routes>
-          </main>
-        </Suspense>
-      </Container>
+      {/* <Container> */}
+      <Suspense fallback={<Loader />}>
+        <main>
+          <Routes>
+            <Route path="/transport-company" element={<HomePage />} />
+            <Route path="/transport-company/about" element={<AboutUsPage />} />
+            <Route
+              path="/transport-company/shippers"
+              element={<ShippersPage />}
+            />
+            <Route
+              path="/transport-company/services"
+              element={<FlatbedPage />}
+            />
+            <Route
+              path="/transport-company/services/:serviceName"
+              element={<FlatbedPage />}
+            />
+            <Route
+              path="/transport-company/lease&finance"
+              element={<FinancePage />}
+            />
+            <Route path="/transport-company/news" element={<NewsPage />} />
+            <Route
+              path="/transport-company/careers"
+              element={<CareersPage />}
+            />
+            <Route
+              path="/transport-company/contacts"
+              element={<ContactsPage />}
+            />
+            <Route path="/transport-company/policy" element={<PolicyPage />} />
+          </Routes>
+        </main>
+      </Suspense>
+      {/* </Container> */}
       <footer></footer>
     </>
   );

@@ -3,6 +3,8 @@ import styled from "styled-components";
 import logo from "../../images/D&Dlogowhite.png";
 
 export const HeaderSection = styled.header`
+position: absolute;
+width: 100%;
 display: flex;
 align-items: center;
 background-color: rgba(0,0,0, .65);

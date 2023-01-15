@@ -26,6 +26,6 @@ declare module 'styled-components' {
         footerTitle: string,
         bgDark: string,
         bgLight: string
-   }
+    },
   }
 }
