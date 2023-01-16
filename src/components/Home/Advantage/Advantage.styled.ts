@@ -26,7 +26,7 @@ position: relative;
 max-width: 410px;
 `
 
-export const ContentItemEmblemContainer = styled.li`
+export const ContentItemEmblemContainer = styled.div`
 position: absolute;
 top: 0;
 left: 50%;

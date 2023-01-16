@@ -1,5 +1,5 @@
 import { useField } from "formik";
-import * as S from "../../components/Hero/Form/Form.styled";
+import * as S from "../../components/Home/Hero/Form/Form.styled";
 
 interface IText {
   name: string;

@@ -8,7 +8,7 @@ import {
   NavigationItem,
   NavigationLink,
 } from "./Header.styled";
-import SubMenu from "../../general/subMenu";
+import { SubMenuHeader } from "../../general";
 
 const itemsForSubServices = [
   "Flatbed",
@@ -75,7 +75,7 @@ export const Header = () => {
                     sectionName={sectionName}
                   /> */}
                 </NavigationLink>
-                <SubMenu
+                <SubMenuHeader
                   itemForSubMenu={itemForSubMenu}
                   sectionName={sectionName}
                 />
@@ -93,7 +93,7 @@ export const Header = () => {
                 <NavigationLink to="/transport-company/services">
                   Transporation Services
                 </NavigationLink>
-                <SubMenu
+                <SubMenuHeader
                   itemForSubMenu={itemForSubMenu}
                   sectionName={sectionName}
                 />
@@ -116,7 +116,7 @@ export const Header = () => {
                 <NavigationLink to="/transport-company/careers">
                   Careers
                 </NavigationLink>
-                <SubMenu
+                <SubMenuHeader
                   itemForSubMenu={itemForSubMenu}
                   sectionName={sectionName}
                 />

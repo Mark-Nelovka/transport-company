@@ -1,11 +1,11 @@
-import Advantage from "../components/Advantage";
-import Hero from "../components/Hero";
+import { Hero, Advantage, Service } from "../components/Home";
 
 function HomePage() {
   return (
     <>
       <Hero />
       <Advantage />
+      <Service />
     </>
   );
 }

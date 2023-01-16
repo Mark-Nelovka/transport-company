@@ -1,5 +1,5 @@
 import FormTest from "./Form";
-import { Container } from "../../styles/container.styled";
+import { Container } from "../../../styles/container.styled";
 import {
   HeroSection,
   HeroContainer,

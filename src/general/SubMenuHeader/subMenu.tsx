@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { SubMenuList, SubMenuItem, SubMenuLink } from "./subMenu.styled";
-import getDynamicPathForNavigation from "../helpers/getNavDynamicPath";
+import getDynamicPathForNavigation from "../../helpers/getNavDynamicPath";
 
 interface ISubMenuProps {
   itemForSubMenu: string[];
   sectionName: string;
 }
 
-export default function SubMenu({
+export const SubMenuHeader = ({
   itemForSubMenu,
   sectionName,
-}: ISubMenuProps) {
+}: ISubMenuProps) => {
   const [dynamicName, setDynamicName] = useState<string>("");
 
   return (
@@ -34,4 +34,4 @@ export default function SubMenu({
         })}
     </SubMenuList>
   );
-}
+};

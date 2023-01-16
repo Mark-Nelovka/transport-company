@@ -1,10 +1,10 @@
-import { Container } from "../../styles/container.styled";
-import item from "../../images/home/homeList1.png";
-import secondItem from "../../images/home/homeList2.png";
-import itemThree from "../../images/home/homeList3.png";
-import itemEmb from "../../images/home/homeEmbList1.png";
-import secondItemEmb from "../../images/home/homeEmbList2.png";
-import itemEmbThree from "../../images/home/homeEmbList3.png";
+import { Container } from "../../../styles/container.styled";
+import item from "../../../images/home/homeList1.png";
+import secondItem from "../../../images/home/homeList2.png";
+import itemThree from "../../../images/home/homeList3.png";
+import itemEmb from "../../../images/home/homeEmbList1.png";
+import secondItemEmb from "../../../images/home/homeEmbList2.png";
+import itemEmbThree from "../../../images/home/homeEmbList3.png";
 import * as S from "./Advantage.styled";
 
 interface IListProps {

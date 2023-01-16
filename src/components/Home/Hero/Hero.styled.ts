@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../images/home/homeHero.png"
+import bg from "../../../images/home/homeHero.png"
 
 export const HeroSection = styled.section`
 background: url(${bg});
