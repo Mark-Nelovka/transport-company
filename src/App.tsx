@@ -4,7 +4,7 @@ import { Loader } from "./components/Loader";
 
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
-// import { Container } from "./styles/container.styled";
+import Footer from "./components/Footer";
 
 const AboutUsPage = lazy(
   () => import("./pages/AboutUs" /* webpackChunkName: "AboutUsPage" */)
@@ -42,7 +42,6 @@ function App() {
   return (
     <>
       <Header />
-      {/* <Container> */}
       <Suspense fallback={<Loader />}>
         <main>
           <Routes>
@@ -77,8 +76,7 @@ function App() {
           </Routes>
         </main>
       </Suspense>
-      {/* </Container> */}
-      <footer></footer>
+      <Footer />
     </>
   );
 }
