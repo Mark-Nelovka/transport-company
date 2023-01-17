@@ -148,7 +148,6 @@ font-weight: ${({ theme }) => theme.fontWeight.reqular};
 font-size: 13px;
 line-height: 170%;
 color: #5490F4;
-text-align: start;
 `
 
 export const BasicLinkText = styled.span`
@@ -162,4 +161,32 @@ color: #9B9B9B;
 
 export const BasicMarkerText = styled(BasicLinkText)`
 
+`
+
+export const Separator = styled.div`
+border: 1px solid #3B3B3B;
+`
+
+export const SubFooter = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #313131;
+padding: 8px;
+`
+
+export const SubText = styled.p`
+font-family: ${({ theme }) => theme.fonts.basic};
+font-style: ${({ theme }) => theme.fontStyle.italic};
+font-weight: ${({ theme }) => theme.fontWeight.reqular};
+font-size: 13px;
+line-height: 170%;
+color: #999999;
+`
+
+export const SubButton = styled(BasicButtonLinks)`
+`
+
+export const SubLink = styled(BasicLink)`
+margin-left: 3px;
 `

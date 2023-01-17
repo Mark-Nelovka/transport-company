@@ -102,6 +102,13 @@ export const Footer = () => {
           </S.BasicContainer>
         </Container>
       </S.BasicFooter>
+      <S.Separator></S.Separator>
+      <S.SubFooter>
+        <S.SubText>All rights reserved | </S.SubText>
+        <S.SubButton>
+          <S.SubLink href="/transport-company/policy">Privacy Policy</S.SubLink>
+        </S.SubButton>
+      </S.SubFooter>
     </footer>
   );
 };
