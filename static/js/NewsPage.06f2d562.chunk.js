@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktransport_company=self.webpackChunktransport_company||[]).push([[827],{7791:function(n,e,t){t.r(e);var r=t(184);e.default=function(){return(0,r.jsx)("section",{children:"NewsPage"})}}}]);
+//# sourceMappingURL=NewsPage.06f2d562.chunk.js.map

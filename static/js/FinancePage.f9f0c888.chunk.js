@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktransport_company=self.webpackChunktransport_company||[]).push([[145],{7812:function(n,e,t){t.r(e);var a=t(184);e.default=function(){return(0,a.jsx)("section",{children:"FinancePage"})}}}]);
+//# sourceMappingURL=FinancePage.f9f0c888.chunk.js.map

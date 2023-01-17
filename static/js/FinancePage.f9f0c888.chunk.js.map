@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/FinancePage.f9f0c888.chunk.js","mappings":"+IAIA,UAJA,WACE,OAAO,6BAAS,eAClB,C","sources":["pages/Finance.tsx"],"sourcesContent":["function FinancePage() {\n  return <section>FinancePage</section>;\n}\n\nexport default FinancePage;\n"],"names":[],"sourceRoot":""}

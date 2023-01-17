@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/NewsPage.06f2d562.chunk.js","mappings":"+IAIA,UAJA,WACE,OAAO,6BAAS,YAClB,C","sources":["pages/News.tsx"],"sourcesContent":["function NewsPage() {\n  return <section>NewsPage</section>;\n}\n\nexport default NewsPage;\n"],"names":[],"sourceRoot":""}

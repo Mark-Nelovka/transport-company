@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/FlatbedPage.f4d1dc96.chunk.js","mappings":"+IAIA,UAJA,WACE,OAAO,6BAAS,eAClB,C","sources":["pages/Flatbed.tsx"],"sourcesContent":["function FlatbedPage() {\n  return <section>FlatbedPage</section>;\n}\n\nexport default FlatbedPage;\n"],"names":[],"sourceRoot":""}

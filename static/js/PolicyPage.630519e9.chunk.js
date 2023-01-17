@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktransport_company=self.webpackChunktransport_company||[]).push([[234],{4496:function(n,t,c){c.r(t);var e=c(184);t.default=function(){return(0,e.jsx)("section",{children:"PolicyPage"})}}}]);
+//# sourceMappingURL=PolicyPage.630519e9.chunk.js.map

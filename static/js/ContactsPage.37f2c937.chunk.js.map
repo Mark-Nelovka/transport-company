@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/ContactsPage.37f2c937.chunk.js","mappings":"+IAIA,UAJA,WACE,OAAO,6BAAS,gBAClB,C","sources":["pages/Contacts.tsx"],"sourcesContent":["function ContactsPage() {\n  return <section>ContactsPage</section>;\n}\n\nexport default ContactsPage;\n"],"names":[],"sourceRoot":""}

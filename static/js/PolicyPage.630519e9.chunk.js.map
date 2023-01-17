@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/PolicyPage.630519e9.chunk.js","mappings":"+IAIA,UAJA,WACE,OAAO,6BAAS,cAClB,C","sources":["pages/Policy.tsx"],"sourcesContent":["function PolicyPage() {\n  return <section>PolicyPage</section>;\n}\n\nexport default PolicyPage;\n"],"names":[],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/ShippersPage.e18433bb.chunk.js","mappings":"+IAIA,UAJA,WACE,OAAO,6BAAS,gBAClB,C","sources":["pages/Shippers.tsx"],"sourcesContent":["function ShippersPage() {\n  return <section>ShippersPage</section>;\n}\n\nexport default ShippersPage;\n"],"names":[],"sourceRoot":""}

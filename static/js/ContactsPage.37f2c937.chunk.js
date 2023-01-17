@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktransport_company=self.webpackChunktransport_company||[]).push([[518],{7335:function(n,t,a){a.r(t);var c=a(184);t.default=function(){return(0,c.jsx)("section",{children:"ContactsPage"})}}}]);
+//# sourceMappingURL=ContactsPage.37f2c937.chunk.js.map
