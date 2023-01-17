@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../../general/Button/Button.styled";
 
-export const FooterSection = styled.footer`
+export const FooterTop = styled.div`
 padding: 50px 0px;
 background-color: ${({ theme }) => theme.palette.active};
 `
 
-export const Top = styled.div`
+export const TopContainer = styled.div`
 display: flex;
 align-items: center;
 `
 
-export const TopCall = styled.span`
+export const TopCall = styled.p`
 font-family:  ${({ theme }) => theme.fonts.additional};
 font-style:  ${({ theme }) => theme.fontStyle.normal};
 font-weight:  ${({ theme }) => theme.fontWeight.medium};
@@ -22,13 +22,7 @@ color:  ${({ theme }) => theme.palette.white};
 margin-right: 20px;
 `
 
-export const TopContactsContainer = styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
-`
-
-export const TopPhoneContainer = styled.div`
+export const TopPhoneButton = styled(Button)`
 display: flex;
 `
 
@@ -42,6 +36,8 @@ height: 30px;
 `
 
 export const TopPhone = styled.a`
+display: flex;
+align-items: center;
 font-family:  ${({ theme }) => theme.fonts.additional};
 font-style:  ${({ theme }) => theme.fontStyle.normal};
 font-weight:  ${({ theme }) => theme.fontWeight.medium};
