@@ -72,9 +72,94 @@ export const TopButtonLink = styled(Link)`
 display: inline-block;
 font-family:  ${({ theme }) => theme.fonts.basic};
 font-style: ${({ theme }) => theme.fontStyle.normal};
-font-weight:${({ theme }) => theme.fontWeight.bold};
+font-weight: ${({ theme }) => theme.fontWeight.bold};
 font-size: 14px;
 line-height: 120%;
 color: ${({ theme }) => theme.palette.white};
 padding: 12px 17px;
+`
+
+export const BasicFooter = styled.div`
+padding-top: 63px;
+padding-bottom: 59px;
+background-color: #313131;
+`
+
+export const BasicContainer = styled.div`
+display: flex;
+`
+
+export const BasicContentContainer = styled.div`
+max-width: 330px;
+&:not(:last-child) {
+    margin-right: 150px;
+}
+`
+
+export const BasicContentTitle = styled.p`
+font-family: ${({ theme }) => theme.fonts.additional};
+font-style: ${({ theme }) => theme.fontStyle.normal};
+font-weight: ${({ theme }) => theme.fontWeight.medium};
+font-size: 24px;
+line-height: 120%;
+color: ${({ theme }) => theme.palette.footerTitle};
+margin-bottom: 18px;
+`
+
+export const BasicContentText = styled.p`
+font-family: ${({ theme }) => theme.fonts.basic};
+font-style:  ${({ theme }) => theme.fontStyle.italic};
+font-weight: ${({ theme }) => theme.fontWeight.reqular};
+font-size: 13px;
+line-height: 170%;
+color: ${({ theme }) => theme.palette.grey};
+`
+
+export const BasicContactsContainer = styled.div`
+display: flex;
+align-items: center;
+`
+
+export const BasicIconContainer = styled.span`
+margin-right: 15px;
+`
+
+export const BasicIcon = styled.img`
+width: 69px;
+height: 69px;
+`
+
+export const BasicLinksContainer = styled.div`
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+align-items: flex-start;
+`
+
+export const BasicButtonLinks = styled(Button)`
+background-color: inherit;
+text-transform: none;
+`
+
+export const BasicLink = styled.a`
+font-family:  ${({ theme }) => theme.fonts.basic};
+font-style:  ${({ theme }) => theme.fontStyle.italic};
+font-weight: ${({ theme }) => theme.fontWeight.reqular};
+font-size: 13px;
+line-height: 170%;
+color: #5490F4;
+text-align: start;
+`
+
+export const BasicLinkText = styled.span`
+font-family:  ${({ theme }) => theme.fonts.basic};
+font-style:  ${({ theme }) => theme.fontStyle.italic};
+font-weight: ${({ theme }) => theme.fontWeight.reqular};
+font-size: 13px;
+line-height: 170%;
+color: #9B9B9B;
+`
+
+export const BasicMarkerText = styled(BasicLinkText)`
+
 `
