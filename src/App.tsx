@@ -5,7 +5,7 @@ import { Loader } from "./components/Loader";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
-import Blog from "./components/AboutUs";
+import { Blog, DetailsBlog } from "./components/AboutUs";
 
 const AboutUsPage = lazy(
   () => import("./pages/AboutUs" /* webpackChunkName: "AboutUsPage" */)
@@ -49,7 +49,10 @@ function App() {
             <Route path="/transport-company" element={<HomePage />} />
             <Route path="/transport-company/about" element={<AboutUsPage />} />
             <Route path="/transport-company/about/blog" element={<Blog />} />
-
+            <Route
+              path="/transport-company/about/blog/:name"
+              element={<DetailsBlog />}
+            />
             <Route
               path="/transport-company/shippers"
               element={<ShippersPage />}

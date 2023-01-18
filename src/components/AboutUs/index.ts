@@ -1,3 +1,4 @@
 import { Blog } from "./Blog/Blog";
+import { DetailsBlog } from "./Blog/DetailsBlog/DetBlog";
 
-export default Blog;
+export { Blog, DetailsBlog };

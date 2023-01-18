@@ -45,7 +45,7 @@ interface ITitleHero {
 }
 
 export const Title = styled.h2<ITitleHero>`
-width: 600px;
+width: ${({ showElements }) => showElements ?  "600px" : "auto"};
 font-family: ${({theme}) => theme.fonts.additional};
 font-style: ${({theme}) => theme.fontStyle.italic};
 font-weight: ${({theme}) => theme.fontWeight.semiBold};

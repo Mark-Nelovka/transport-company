@@ -37,6 +37,10 @@ export const Blog = () => {
                     to={`/transport-company/about/blog/${getDynamicPath(
                       "Start Your Trucking Career Today"
                     )}`}
+                    state={{
+                      title: "Start Your Trucking Career Today",
+                      image: blogImage,
+                    }}
                   >
                     Read more
                   </S.DescriptionLink>

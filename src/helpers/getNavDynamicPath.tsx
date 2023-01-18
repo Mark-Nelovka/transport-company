@@ -3,10 +3,6 @@ interface IDynamicPathNav {
   dynamicName: string;
 }
 
-interface IDynamicPath {
-  dynamicName: string;
-}
-
 export function getDynamicPathForNavigation({
   e,
   dynamicName,
