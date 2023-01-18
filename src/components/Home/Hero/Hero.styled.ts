@@ -1,19 +1,28 @@
 import styled from "styled-components";
-import bg from "../../../images/home/homeHero.png"
 
-export const HeroSection = styled.section`
-background: url(${bg});
-background-size: cover;
+interface IHeroSectionStyle {
+    background: string
+    showElements: boolean
+}
+
+export const HeroSection = styled.section<IHeroSectionStyle>`
+background-image: url(${({ background }) => background});
+background-size: ${({showElements}) => showElements ? "cover" : "none"};
 background-repeat: no-repeat;
+background-position: ${({showElements}) => showElements ? "left" : "top"} ;
 width: 100vw;
-height: 100vh;
 padding-top: 150px;
+padding-bottom: 86px;
 `
 
-export const HeroContainer = styled.div`
+interface ITitleHero {
+    showElements: boolean
+}
+
+export const HeroContainer = styled.div<ITitleHero>`
 display: flex;
 align-items: center;
-justify-content: space-around;
+justify-content: ${({showElements}) => showElements ? "space-around" : "none"};
 `
 
 export const TitleContainer = styled.div`
@@ -31,12 +40,16 @@ padding: 1px 32px 1px 32px;
 background-color: ${({theme}) => theme.palette.active};
 `
 
-export const Title = styled.h2`
+interface ITitleHero {
+    showElements: boolean
+}
+
+export const Title = styled.h2<ITitleHero>`
 width: 600px;
 font-family: ${({theme}) => theme.fonts.additional};
 font-style: ${({theme}) => theme.fontStyle.italic};
 font-weight: ${({theme}) => theme.fontWeight.semiBold};
 font-size: 52px;
 line-height: 120%;
-color: ${({ theme }) => theme.palette.white};
+color: ${({ theme, showElements }) => showElements ?  theme.palette.white : theme.palette.active};
 `

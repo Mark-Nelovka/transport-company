@@ -8,18 +8,22 @@ import {
   Title,
 } from "./Hero.styled";
 
-export const Hero = () => {
+interface IHero {
+  title: string;
+  showElements: boolean;
+  background: string;
+}
+
+export const Hero = ({ title, showElements, background }: IHero) => {
   return (
-    <HeroSection>
+    <HeroSection showElements={showElements} background={background}>
       <Container>
-        <HeroContainer>
+        <HeroContainer showElements={showElements}>
           <TitleContainer>
-            <NameCompany>D&D United Corp.</NameCompany>
-            <Title>
-              Transportion <br /> and Freight Services <br /> in Chicago, Il
-            </Title>
+            {showElements && <NameCompany>D&D United Corp.</NameCompany>}
+            <Title showElements={showElements}>{title}</Title>
           </TitleContainer>
-          <FormTest />
+          {showElements && <FormTest />}
         </HeroContainer>
       </Container>
     </HeroSection>
