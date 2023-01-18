@@ -1,3 +1,3 @@
-import { About } from "./About/About";
+import { About } from "../../general/About/About";
 
 export default About;

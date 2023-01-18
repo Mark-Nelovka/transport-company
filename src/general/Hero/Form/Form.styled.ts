@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import {Button} from "../../../../general/Button/Button.styled";
+import {Button} from "../../Button/Button.styled";
 
 export const FormSubscribe = styled.div`
 position: relative;

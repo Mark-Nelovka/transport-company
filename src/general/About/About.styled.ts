@@ -38,3 +38,16 @@ color: ${({ theme }) => theme.palette.darkGrey};
     margin-bottom: 15px;
 }
 `
+
+interface IBackgroundProps {
+    background: string
+}
+
+export const Background = styled.div<IBackgroundProps>`
+background-image: url(${({ background }) => background});
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+min-width: 100vw;
+min-height: 100vh;
+`

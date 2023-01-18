@@ -1,4 +1,4 @@
-import { Hero } from "./Hero/Hero";
+import { Hero } from "../../general/Hero/Hero";
 import { Advantage } from "./Advantage/Advantage";
 import { Service } from "./Service/Service";
 import { Feedback } from "./Feedback/Feedback";

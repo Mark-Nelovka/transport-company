@@ -1,18 +1,15 @@
 import { Formik, Form } from "formik";
 import { useState } from "react";
-import { MyTextInput } from "../../../../general";
-import {
-  schemaStepOne,
-  schemaSecondStep,
-} from "../../../../helpers/validation";
-import man from "../../../../images/svg/manForm.svg";
-import mail from "../../../../images/svg/mailForm.svg";
-import phone from "../../../../images/svg/phone.svg";
-import marker from "../../../../images/svg/marker.svg";
-import driveExp from "../../../../images/svg/drivingForm.svg";
+import { MyTextInput } from "../..";
+import { schemaStepOne, schemaSecondStep } from "../../../helpers/validation";
+import man from "../../../images/svg/manForm.svg";
+import mail from "../../../images/svg/mailForm.svg";
+import phone from "../../../images/svg/phone.svg";
+import marker from "../../../images/svg/marker.svg";
+import driveExp from "../../../images/svg/drivingForm.svg";
 
 import * as S from "./Form.styled";
-import { Loader } from "../../../Loader";
+import { Loader } from "../../../components/Loader";
 
 interface IStateForm {
   firstName?: string;

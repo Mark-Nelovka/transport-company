@@ -1,19 +1,21 @@
-import About from "../components/AboutUs";
+import { About } from "../general";
 import { Hero } from "../components/Home";
 import { ServiceList } from "../general";
-import BG from "../images/about/aboutHero.png";
+import bgHero from "../images/about/aboutHero.png";
+import bgAbout from "../images/about/aboutCub.png";
 import { Container } from "../styles/container.styled";
 
 function AboutUsPage() {
   return (
     <section>
-      <Hero showElements={false} title="About Us" background={BG} />
+      <Hero showElements={false} title="About Us" background={bgHero} />
       <Container>
         <section style={{ paddingTop: "73px", paddingBottom: "73px" }}>
           <ServiceList />
         </section>
       </Container>
       <About
+        background={bgAbout}
         title="About Us"
         textLeft={[
           "D&D United Corp Services Inc is a transportation company based in Illinois that was opened in 2013 by Sergiu Tintiuc, a long-time veteran of the trucking industry. Mr. Tintiuc started the company as the owner/operator. For the first two and a half years of its existence, he worked with his own truck, a 2006 Freightliner Century.",
