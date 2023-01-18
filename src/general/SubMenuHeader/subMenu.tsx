@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SubMenuList, SubMenuItem, SubMenuLink } from "./subMenu.styled";
-import getDynamicPathForNavigation from "../../helpers/getNavDynamicPath";
+import { getDynamicPathForNavigation } from "../../helpers/getNavDynamicPath";
 
 interface ISubMenuProps {
   itemForSubMenu: string[];

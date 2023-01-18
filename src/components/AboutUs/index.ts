@@ -1,3 +1,3 @@
-import { About } from "../../general/About/About";
+import { Blog } from "./Blog/Blog";
 
-export default About;
+export default Blog;

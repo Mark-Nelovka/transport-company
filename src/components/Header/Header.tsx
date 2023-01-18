@@ -70,10 +70,6 @@ export const Header = () => {
               >
                 <NavigationLink to="/transport-company/about">
                   About
-                  {/* <SubMenu
-                    itemForSubMenu={itemForSubMenu}
-                    sectionName={sectionName}
-                  /> */}
                 </NavigationLink>
                 <SubMenuHeader
                   itemForSubMenu={itemForSubMenu}

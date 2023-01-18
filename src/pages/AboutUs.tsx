@@ -10,9 +10,9 @@ function AboutUsPage() {
     <section>
       <Hero showElements={false} title="About Us" background={bgHero} />
       <Container>
-        <section style={{ paddingTop: "73px", paddingBottom: "73px" }}>
+        <div style={{ paddingTop: "73px", paddingBottom: "73px" }}>
           <ServiceList />
-        </section>
+        </div>
       </Container>
       <About
         background={bgAbout}
