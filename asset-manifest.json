@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/transport-company/static/js/main.1113ed51.js",
+    "main.js": "/transport-company/static/js/main.9ade1627.js",
     "AboutUsPage.js": "/transport-company/static/js/AboutUsPage.fd1fa5b6.chunk.js",
-    "ShippersPage.js": "/transport-company/static/js/ShippersPage.e18433bb.chunk.js",
+    "ShippersPage.js": "/transport-company/static/js/ShippersPage.68b38c61.chunk.js",
     "FlatbedPage.js": "/transport-company/static/js/FlatbedPage.f4d1dc96.chunk.js",
     "FinancePage.js": "/transport-company/static/js/FinancePage.f9f0c888.chunk.js",
     "NewsPage.js": "/transport-company/static/js/NewsPage.06f2d562.chunk.js",
@@ -11,6 +11,7 @@
     "PolicyPage.js": "/transport-company/static/js/PolicyPage.630519e9.chunk.js",
     "static/js/787.6a212a8a.chunk.js": "/transport-company/static/js/787.6a212a8a.chunk.js",
     "static/media/homeHero.png": "/transport-company/static/media/homeHero.8d7136f08e8fdd19b8ca.png",
+    "static/media/shippers.png": "/transport-company/static/media/shippers.44107cbdf1284b08611a.png",
     "static/media/aboutHero.png": "/transport-company/static/media/aboutHero.3a6d294da64aae47abda.png",
     "static/media/aboutBlog.png": "/transport-company/static/media/aboutBlog.966b4e460fbd5c7c6e61.png",
     "static/media/aboutCub.png": "/transport-company/static/media/aboutCub.61054d8f26013c36a824.png",
@@ -32,9 +33,9 @@
     "static/media/phone.svg": "/transport-company/static/media/phone.e8ec5ddfb22647533fd4c5ac723f57d2.svg",
     "static/media/check.svg": "/transport-company/static/media/check.9ff31de546695e51b84138de2639b065.svg",
     "static/media/facebook.svg": "/transport-company/static/media/facebook.0ec29ba2db146e5108ab4a9245eccc5a.svg",
-    "main.1113ed51.js.map": "/transport-company/static/js/main.1113ed51.js.map",
+    "main.9ade1627.js.map": "/transport-company/static/js/main.9ade1627.js.map",
     "AboutUsPage.fd1fa5b6.chunk.js.map": "/transport-company/static/js/AboutUsPage.fd1fa5b6.chunk.js.map",
-    "ShippersPage.e18433bb.chunk.js.map": "/transport-company/static/js/ShippersPage.e18433bb.chunk.js.map",
+    "ShippersPage.68b38c61.chunk.js.map": "/transport-company/static/js/ShippersPage.68b38c61.chunk.js.map",
     "FlatbedPage.f4d1dc96.chunk.js.map": "/transport-company/static/js/FlatbedPage.f4d1dc96.chunk.js.map",
     "FinancePage.f9f0c888.chunk.js.map": "/transport-company/static/js/FinancePage.f9f0c888.chunk.js.map",
     "NewsPage.06f2d562.chunk.js.map": "/transport-company/static/js/NewsPage.06f2d562.chunk.js.map",
@@ -44,6 +45,6 @@
     "787.6a212a8a.chunk.js.map": "/transport-company/static/js/787.6a212a8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1113ed51.js"
+    "static/js/main.9ade1627.js"
   ]
 }

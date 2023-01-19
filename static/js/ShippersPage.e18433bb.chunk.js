@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktransport_company=self.webpackChunktransport_company||[]).push([[401],{4530:function(n,e,r){r.r(e);var t=r(184);e.default=function(){return(0,t.jsx)("section",{children:"ShippersPage"})}}}]);
-//# sourceMappingURL=ShippersPage.e18433bb.chunk.js.map
