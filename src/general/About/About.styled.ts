@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const AboutSection = styled.section`
@@ -37,6 +38,28 @@ color: ${({ theme }) => theme.palette.darkGrey};
 &:not(:last-child) {
     margin-bottom: 15px;
 }
+`
+
+export const ButtonContainer = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 60px;
+
+& > button:first-child {
+    margin-right: 30px;
+}
+`
+
+export const ButtonLink = styled(Link)`
+font-family: ${({theme}) => theme.fonts.basic};
+font-style: ${({theme}) => theme.fontStyle.normal};
+font-weight: ${({theme}) => theme.fontWeight.reqular};
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+color: ${({theme}) => theme.palette.white};
+padding: 18px 70px;
 `
 
 interface IBackgroundProps {

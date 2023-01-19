@@ -75,6 +75,10 @@ function App() {
               element={<CareersPage />}
             />
             <Route
+              path="/transport-company/careers/:position"
+              element={<CareersPage />}
+            />
+            <Route
               path="/transport-company/contacts"
               element={<ContactsPage />}
             />

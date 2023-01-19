@@ -8,4 +8,5 @@ color: ${({theme}) => theme.palette.white};
 text-transform: uppercase;
 background-color: ${({ theme }) => theme.palette.active};
 border-radius: 5px;
+display: inherit;
 `
